@@ -636,7 +636,7 @@ def video_inpainting(args):
     for indFrame in range(nFrame):
         mask_gradient[:, :, indFrame] = scipy.ndimage.binary_fill_holes(
             mask_gradient[:, :, indFrame]
-        ).astype(np.bool)
+        ).astype(bool)
 
     # After one gradient propagation iteration
     # gradient --> RGB
